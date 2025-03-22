@@ -1,0 +1,22 @@
+-Widoczne jest wyraźne zróżnicowanie efektywności algorytmu DFS w zależności od tego, czy liczba hetmanów jest parzysta czy nieparzysta.
+Dla liczb parzystych (np. n = 6, 8, 10, 12):
+Czas wykonania i rozmiar list (otwartej i zamkniętej) są znacznie wyższe.
+Szczególnie wyraźne są piki (znaczny wzrost), np. dla n=10 czas przekracza 2 sekundy, a rozmiar listy zamkniętej sięga ponad 120 tys. elementów.
+Dla liczb nieparzystych (np. n = 5, 7, 9, 11):
+Czas działania oraz rozmiar list są wyraźnie mniejsze.
+Wykresy mają dużo łagodniejszy przebieg, wskazujący na dużo szybsze i efektywniejsze znajdowanie rozwiązania.
+
+Wyraźna korelacja między czasem wykonania algorytmu a rozmiarem listy zamkniętej.
+
+Wzrost rozmiaru listy zamkniętej silnie odpowiada wzrostowi czasu działania – im więcej stanów algorytm musi odwiedzić (więcej węzłów w liście zamkniętej), tym większy będzie czas przeszukiwania.
+
+Wniosek:
+Algorytm DFSMod2 radzi sobie zauważalnie lepiej z nieparzystą liczbą hetmanów niż z parzystą.
+Liczba elementów na liście zamkniętej jest kluczowym czynnikiem wpływającym na czas działania DFSMod2
+
+Algorytm BFSMod2 praktycznie przestaje działać poprawnie już od n=6.
+Przy liczbie hetmanów większej niż 6 BFSMod2 w ogóle nie osiąga wyniku w rozsądnym czasie, co jednoznacznie świadczy o ogromnej nieefektywności tej metody w problemie N-hetmanów.
+BFS wykazuje ekstremalny, wykładniczy wzrost przestrzeni przeszukiwania, co powoduje ogromne zużycie zasobów i czasu.
+
+Wniosek:
+Algorytm BFSMod2 nie nadaje się do zastosowania dla tego typu problemów, chyba że do celów labolatoryjnych lub pokazowych dla bardzo małych n (4-5)
