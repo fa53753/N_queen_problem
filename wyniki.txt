@@ -1,0 +1,32 @@
+Search DFSMod2 for n=4:
+- Open: 21,
+- Closed: 19,
+- Elapsed: 0,0190463s.
+
+Search DFSMod2 for n=5:
+- Open: 40,
+- Closed: 5,
+- Elapsed: 0,0005311s.
+
+Search DFSMod2 for n=6:
+- Open: 68,
+- Closed: 1439,
+- Elapsed: 0,067557s.
+
+
+Search BFSMod2 for n=4:
+- Open: 47,
+- Closed: 249,
+- Elapsed: 0,0090366s.
+
+Search BFSMod2 for n=5:
+- Open: 1199,
+- Closed: 3498,
+- Elapsed: 0,6127806s.
+
+Search BFSMod2 for n=6:
+- Open: 2879,
+- Closed: 60189,
+- Elapsed: 47,5474333s.
+
+
