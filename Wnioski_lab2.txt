@@ -1,0 +1,96 @@
+[2025-03-29 21:39:17] Search BFSH for n=4:
+- Open: 557,
+- Closed: 277,
+- Heuristic (H2): 0,
+- Elapsed: 0,4886399s.
+[ (1, 3), (3, 2), (0, 1), (2, 0) ]
+o x o o
+o o o x
+x o o o
+o o x o
+
+
+#########################
+
+[2025-03-29 21:39:18] Search BFSH for n=5:
+- Open: 110,
+- Closed: 5,
+- Heuristic (H2): 0,
+- Elapsed: 0,0011315s.
+[ (0, 0), (1, 2), (2, 4), (3, 1), (4, 3) ]
+x o o o o
+o o x o o
+o o o o x
+o x o o o
+o o o x o
+
+
+[2025-03-29 21:45:50] Search BFSH for n=4:
+- Open: 62,
+- Closed: 16,
+- Heuristic (H1): 0,
+- Elapsed: 0,018293s.
+[ (1, 3), (2, 0), (0, 1), (3, 2) ]
+o x o o
+o o o x
+x o o o
+o o x o
+
+
+#########################
+
+[2025-03-29 21:45:50] Search BFSH for n=5:
+- Open: 432,
+- Closed: 76,
+- Heuristic (H1): 0,
+- Elapsed: 0,3188113s.
+[ (3, 2), (2, 4), (1, 1), (0, 3), (4, 0) ]
+o o o x o
+o x o o o
+o o o o x
+o o x o o
+x o o o o
+
+[2025-03-29 21:46:54] Search BFSH for n=4:
+- Open: 22,
+- Closed: 23,
+- Heuristic (HM): 0,3333333333333335,
+- Elapsed: 0,0143461s.
+[ (1, 0), (3, 1), (0, 2), (2, 3) ]
+o o x o
+x o o o
+o o o x
+o x o o
+
+
+#########################
+
+[2025-03-29 21:46:54] Search BFSH for n=5:
+- Open: 43,
+- Closed: 8,
+- Heuristic (HM): 1,
+- Elapsed: 0,0009577s.
+[ (0, 0), (1, 2), (3, 1), (2, 4), (4, 3) ]
+x o o o o
+o o x o o
+o o o o x
+o x o o o
+o o o x o
+
+Heurystyka h1:
+-Lista open i closed: Rozmiar list open i closed rośnie liniowo
+-Czas wykonania: Czas działania algorytmu rośnie liniowo wraz ze wzrostem złożoności problemu, co świadczy o względnie przewidywalnym, ale niekoniecznie efektywnym działaniu tej heurystyki
+-Heurystyka: Stała wartość heurystyki świadczy o tym, że h1 może być bardzo prosta
+
+Heurystyka h2:
+-Lista open i closed: Rozmiar listy open i closed maleje wraz ze wzrostem rozmiaru problemu. Jest to nietypowe zachowanie, które może wskazywać, że heurystyka h2 działa efektywnie 
+-Czas wykonania: Malejący czas wykonania wraz z rosnącym problemem sugeruje, że heurystyka h2 skutecznie kieruje poszukiwaniem rozwiązania
+-Heurystyka: Stała wartość heurystyki sugeruje również względnie prosty sposób wyliczania
+
+Heurystyka hm:
+-Lista open i closed: Rozmiar listy open rośnie, a lista closed maleje, co wskazuje, że heurystyka hm znajduje się pomiędzy h1 i h2 – zachowuje średnią efektywność, lepiej niż h1, lecz gorzej niż h2
+-Czas wykonania: Czas działania maleje, co sugeruje, że mimo rosnącej listy open, heurystyka ta nadal potrafi efektywnie odnajdywać rozwiązania
+-Heurystyka: Rosnąca wartość heurystyki sugeruje, że wraz ze wzrostem rozmiaru problemu dostarcza coraz lepszych wskazówek dla algorytmu, co poprawia efektywność znajdowania rozwiązania
+
+PODSUMOWANIE
+Najbardziej efektywna heurystyka z przedstawionych to h2, ponieważ wykazuje znaczną redukcję liczby analizowanych stanów i krótszy czas działania dla coraz większych problemów. Najsłabiej wypada h1, która ma tendencję do sprawdzania dużej liczby stanów, nie zmniejszając przestrzeni poszukiwań.
